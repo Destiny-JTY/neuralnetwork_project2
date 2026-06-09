@@ -1,0 +1,19 @@
+{
+  "model": "baseline",
+  "model_parameters": 620362,
+  "device": "cpu",
+  "epochs_completed": 10,
+  "total_training_seconds": 376.3882906239987,
+  "average_epoch_seconds": 37.63882906239987,
+  "average_train_seconds": 34.602342204199886,
+  "average_test_seconds": 3.036486858199987,
+  "best_epoch": 8,
+  "best_train_loss": 0.2977225702571869,
+  "best_train_accuracy": 0.89548,
+  "best_test_loss": 0.7724184679985047,
+  "best_test_accuracy": 0.7612,
+  "best_test_error": 0.2388,
+  "best_test_error_percent": 23.880000000000003,
+  "best_model_path": "/Users/destinysmac/Downloads/PJ2_2026/codes/VGG_BatchNorm/reports/runs/baseline-adam-10ep/models/best.pt",
+  "last_model_path": "/Users/destinysmac/Downloads/PJ2_2026/codes/VGG_BatchNorm/reports/runs/baseline-adam-10ep/models/last.pt"
+}

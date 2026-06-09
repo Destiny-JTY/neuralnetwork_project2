@@ -1,0 +1,2 @@
+epoch,train_loss,train_accuracy,test_loss,test_accuracy,learning_rate,train_seconds,test_seconds,epoch_seconds
+1,1.3684548307418822,0.51004,1.0700179779052734,0.6242,0.001,33.459809166000014,2.8473711249998814,36.307180290999895

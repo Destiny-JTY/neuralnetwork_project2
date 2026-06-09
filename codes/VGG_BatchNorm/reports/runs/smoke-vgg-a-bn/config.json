@@ -1,0 +1,21 @@
+{
+  "model": "vgg_a_bn",
+  "epochs": 1,
+  "batch_size": 128,
+  "lr": 0.001,
+  "optimizer": "adam",
+  "scheduler": "none",
+  "step_size": 10,
+  "gamma": 0.1,
+  "weight_decay": 0.0,
+  "seed": 2020,
+  "device": "mps",
+  "num_workers": 0,
+  "train_items": 512,
+  "val_items": 256,
+  "data_dir": "/Users/destinysmac/Downloads/PJ2_2026/codes/VGG_BatchNorm/data",
+  "output_dir": "/Users/destinysmac/Downloads/PJ2_2026/codes/VGG_BatchNorm/reports/runs",
+  "run_name": "smoke-vgg-a-bn",
+  "no_download": false,
+  "no_record_gradients": false
+}

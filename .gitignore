@@ -1,0 +1,58 @@
+# macOS and editor files
+.DS_Store
+._*
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Python caches and build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Python environments
+.venv/
+venv/
+env/
+.env
+.env.*
+
+# Jupyter temporary files
+.ipynb_checkpoints/
+
+# CIFAR-10 and other downloaded datasets
+codes/VGG_BatchNorm/data/*
+!codes/VGG_BatchNorm/data/__init__.py
+!codes/VGG_BatchNorm/data/loaders.py
+
+# Model checkpoints and exported models
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+*.h5
+
+# Large experiment arrays and temporary outputs
+*.npy
+*.npz
+*.pkl
+*.pickle
+*.joblib
+*.tmp
+*.log
+
+# Training artifacts that can grow quickly
+codes/VGG_BatchNorm/reports/runs/*/logs/history.json
+codes/VGG_BatchNorm/reports/runs/*/logs/step_loss.txt
+codes/VGG_BatchNorm/reports/runs/*/logs/step_gradient_norm.txt

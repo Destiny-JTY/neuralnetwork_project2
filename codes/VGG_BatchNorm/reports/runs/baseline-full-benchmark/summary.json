@@ -1,0 +1,19 @@
+{
+  "model": "baseline",
+  "model_parameters": 620362,
+  "device": "cpu",
+  "epochs_completed": 1,
+  "total_training_seconds": 36.307180290999895,
+  "average_epoch_seconds": 36.307180290999895,
+  "average_train_seconds": 33.459809166000014,
+  "average_test_seconds": 2.8473711249998814,
+  "best_epoch": 1,
+  "best_train_loss": 1.3684548307418822,
+  "best_train_accuracy": 0.51004,
+  "best_test_loss": 1.0700179779052734,
+  "best_test_accuracy": 0.6242,
+  "best_test_error": 0.3758,
+  "best_test_error_percent": 37.580000000000005,
+  "best_model_path": "/Users/destinysmac/Downloads/PJ2_2026/codes/VGG_BatchNorm/reports/runs/baseline-full-benchmark/models/best.pt",
+  "last_model_path": "/Users/destinysmac/Downloads/PJ2_2026/codes/VGG_BatchNorm/reports/runs/baseline-full-benchmark/models/last.pt"
+}

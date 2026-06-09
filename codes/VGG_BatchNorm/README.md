@@ -43,6 +43,41 @@ python VGG_Loss_Landscape.py \
   --run-name baseline-adam
 ```
 
+## Controlled baseline ablations
+
+The baseline defaults still reproduce the original control architecture:
+`32-64-128` convolution channels, `256` hidden units, ReLU, no BatchNorm,
+no Dropout, and plain cross-entropy. Change only one factor per controlled
+experiment, for example:
+
+```bash
+python VGG_Loss_Landscape.py \
+  --model baseline \
+  --epochs 20 \
+  --optimizer adam \
+  --lr 0.001 \
+  --baseline-channels 16-32-64 \
+  --run-name ablation-width-small
+
+python VGG_Loss_Landscape.py \
+  --model baseline \
+  --epochs 20 \
+  --optimizer adam \
+  --lr 0.001 \
+  --activation gelu \
+  --run-name ablation-activation-gelu
+```
+
+Available baseline factors include `--baseline-channels`, `--fc-width`,
+`--activation`, `--weight-decay`, `--label-smoothing`, `--dropout`, and
+`--baseline-batch-norm`.
+
+Aggregate completed runs into one CSV table with:
+
+```bash
+python aggregate_results.py
+```
+
 ## VGG experiments
 
 ```bash
@@ -51,7 +86,7 @@ python VGG_Loss_Landscape.py --model vgg_a_bn --epochs 20 --lr 0.001
 ```
 
 Use `python VGG_Loss_Landscape.py --help` to see optimizer, scheduler, device,
-dataset subset, and output options.
+dataset subset, baseline ablation, and output options.
 
 Each run creates:
 

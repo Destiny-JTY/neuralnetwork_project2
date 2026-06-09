@@ -8,6 +8,16 @@
   "step_size": 10,
   "gamma": 0.1,
   "weight_decay": 0.0,
+  "label_smoothing": 0.0,
+  "baseline_channels": [
+    16,
+    32,
+    64
+  ],
+  "fc_width": 256,
+  "activation": "relu",
+  "baseline_batch_norm": false,
+  "dropout": 0.0,
   "seed": 2020,
   "device": "cuda",
   "num_workers": 0,
@@ -15,10 +25,10 @@
   "test_items": -1,
   "data_dir": "/data/yuhang/destiny/neuralnetwork_project2/codes/VGG_BatchNorm/data",
   "output_dir": "/data/yuhang/destiny/neuralnetwork_project2/codes/VGG_BatchNorm/reports/runs",
-  "run_name": "baseline-adam-10ep",
+  "run_name": "ablation-width-16-32-64",
   "no_download": false,
   "no_record_gradients": false,
-  "model_parameters": 620362,
+  "model_parameters": 288554,
   "training_samples": 50000,
   "test_samples": 10000
 }

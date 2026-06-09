@@ -20,16 +20,16 @@ batch size, and optimizer fixed unless that factor is being tested.
 
 ### Implementation
 
-- [ ] Make the baseline architecture configurable:
-  - [ ] convolution channel widths, such as `16-32-64`, `32-64-128`,
+- [x] Make the baseline architecture configurable:
+  - [x] convolution channel widths, such as `16-32-64`, `32-64-128`,
         and `64-128-256`;
-  - [ ] fully connected hidden width, such as `128`, `256`, and `512`;
-  - [ ] activation: ReLU, LeakyReLU, and GELU;
-  - [ ] regularization: weight decay, label smoothing, and Dropout;
-  - [ ] optional BatchNorm or another required improvement component.
-- [ ] Add CLI arguments for these model and loss settings.
-- [ ] Save every experiment configuration in `config.json`.
-- [ ] Add a script that aggregates run summaries into one CSV/table.
+  - [x] fully connected hidden width, such as `128`, `256`, and `512`;
+  - [x] activation: ReLU, LeakyReLU, and GELU;
+  - [x] regularization: weight decay, label smoothing, and Dropout;
+  - [x] optional BatchNorm or another required improvement component.
+- [x] Add CLI arguments for these model and loss settings.
+- [x] Save every experiment configuration in `config.json`.
+- [x] Add a script that aggregates run summaries into one CSV/table.
 
 ### Minimum Controlled Experiments
 

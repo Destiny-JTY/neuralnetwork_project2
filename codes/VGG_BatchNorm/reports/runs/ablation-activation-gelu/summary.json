@@ -1,0 +1,19 @@
+{
+  "model": "baseline",
+  "model_parameters": 620362,
+  "device": "cuda",
+  "epochs_completed": 10,
+  "total_training_seconds": 34.7943478024099,
+  "average_epoch_seconds": 3.4794347802409904,
+  "average_train_seconds": 3.0000874457880853,
+  "average_test_seconds": 0.4793473344529048,
+  "best_epoch": 7,
+  "best_train_loss": 0.17316241127967835,
+  "best_train_accuracy": 0.944,
+  "best_test_loss": 0.9201801368713379,
+  "best_test_accuracy": 0.7577,
+  "best_test_error": 0.24229999999999996,
+  "best_test_error_percent": 24.229999999999997,
+  "best_model_path": "/data/yuhang/destiny/neuralnetwork_project2/codes/VGG_BatchNorm/reports/runs/ablation-activation-gelu/models/best.pt",
+  "last_model_path": "/data/yuhang/destiny/neuralnetwork_project2/codes/VGG_BatchNorm/reports/runs/ablation-activation-gelu/models/last.pt"
+}

@@ -1,0 +1,19 @@
+{
+  "model": "baseline",
+  "model_parameters": 620362,
+  "device": "cuda",
+  "epochs_completed": 10,
+  "total_training_seconds": 34.53460902906954,
+  "average_epoch_seconds": 3.4534609029069543,
+  "average_train_seconds": 2.999689489719458,
+  "average_test_seconds": 0.45377141318749636,
+  "best_epoch": 8,
+  "best_train_loss": 0.4177088930130005,
+  "best_train_accuracy": 0.85622,
+  "best_test_loss": 0.6873745957374573,
+  "best_test_accuracy": 0.7704,
+  "best_test_error": 0.22960000000000003,
+  "best_test_error_percent": 22.96,
+  "best_model_path": "/data/yuhang/destiny/neuralnetwork_project2/codes/VGG_BatchNorm/reports/runs/ablation-weight-decay-5e-4/models/best.pt",
+  "last_model_path": "/data/yuhang/destiny/neuralnetwork_project2/codes/VGG_BatchNorm/reports/runs/ablation-weight-decay-5e-4/models/last.pt"
+}

@@ -396,9 +396,33 @@ def plot_loss_landscape(envelopes, save_path, max_steps=None):
     plt.close(figure)
 
 
-def build_model(model_name):
+def parse_channels(value):
+    try:
+        channels = tuple(int(part) for part in value.replace(",", "-").split("-"))
+    except ValueError as exc:
+        raise argparse.ArgumentTypeError(
+            "channels must be integers separated by '-' or ','"
+        ) from exc
+    if len(channels) != 3 or any(channel < 1 for channel in channels):
+        raise argparse.ArgumentTypeError(
+            "--baseline-channels expects three positive widths, e.g. 32-64-128"
+        )
+    return channels
+
+
+def build_model(model_name, args=None):
+    if model_name == "baseline":
+        if args is None:
+            return BaselineCNN()
+        return BaselineCNN(
+            channels=args.baseline_channels,
+            hidden_width=args.fc_width,
+            activation=args.activation,
+            use_batch_norm=args.baseline_batch_norm,
+            dropout=args.dropout,
+        )
+
     models = {
-        "baseline": BaselineCNN,
         "vgg_a": VGG_A,
         "vgg_a_bn": VGG_A_BatchNorm,
     }
@@ -457,6 +481,19 @@ def parse_args():
     parser.add_argument("--step-size", type=int, default=10)
     parser.add_argument("--gamma", type=float, default=0.1)
     parser.add_argument("--weight-decay", type=float, default=0.0)
+    parser.add_argument("--label-smoothing", type=float, default=0.0)
+    parser.add_argument(
+        "--baseline-channels",
+        type=parse_channels,
+        default=parse_channels("32-64-128"),
+        help="three baseline channel widths, such as 16-32-64",
+    )
+    parser.add_argument("--fc-width", type=int, default=256)
+    parser.add_argument(
+        "--activation", choices=["relu", "leaky_relu", "gelu"], default="relu"
+    )
+    parser.add_argument("--baseline-batch-norm", action="store_true")
+    parser.add_argument("--dropout", type=float, default=0.0)
     parser.add_argument("--seed", type=int, default=2020)
     parser.add_argument("--device", default="auto", help="auto, cpu, cuda, cuda:0, mps")
     parser.add_argument("--num-workers", type=int, default=0)
@@ -477,6 +514,12 @@ def parse_args():
         parser.error("--num-workers cannot be negative")
     if args.lr <= 0:
         parser.error("--lr must be positive")
+    if args.fc_width < 1:
+        parser.error("--fc-width must be positive")
+    if not 0.0 <= args.dropout < 1.0:
+        parser.error("--dropout must be in the range [0, 1)")
+    if not 0.0 <= args.label_smoothing < 1.0:
+        parser.error("--label-smoothing must be in the range [0, 1)")
     return args
 
 
@@ -493,6 +536,7 @@ def main():
     run_dir.mkdir(parents=True, exist_ok=True)
 
     config = vars(args).copy()
+    config["baseline_channels"] = list(args.baseline_channels)
     config["data_dir"] = str(args.data_dir.expanduser().resolve())
     config["output_dir"] = str(args.output_dir.expanduser().resolve())
     config["run_name"] = run_name
@@ -519,7 +563,7 @@ def main():
         pin_memory=pin_memory,
     )
 
-    model = build_model(args.model)
+    model = build_model(args.model, args)
     model_parameters = get_number_of_parameters(model)
     config["model_parameters"] = model_parameters
     config["training_samples"] = len(train_loader.dataset)
@@ -544,7 +588,7 @@ def main():
     history = train(
         model=model,
         optimizer=optimizer,
-        criterion=nn.CrossEntropyLoss(),
+        criterion=nn.CrossEntropyLoss(label_smoothing=args.label_smoothing),
         train_loader=train_loader,
         test_loader=test_loader,
         device=device,

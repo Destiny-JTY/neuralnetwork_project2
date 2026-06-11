@@ -1,0 +1,19 @@
+{
+  "model": "baseline",
+  "model_parameters": 1422218,
+  "device": "cuda",
+  "epochs_completed": 20,
+  "total_training_seconds": 68.76058086217381,
+  "average_epoch_seconds": 3.4380290431086906,
+  "average_train_seconds": 2.9772546028485523,
+  "average_test_seconds": 0.46077444026013836,
+  "best_epoch": 18,
+  "best_train_loss": 0.6167751325035096,
+  "best_train_accuracy": 0.9934,
+  "best_test_loss": 0.9673861598014831,
+  "best_test_accuracy": 0.8136,
+  "best_test_error": 0.1864,
+  "best_test_error_percent": 18.64,
+  "best_model_path": "/data/yuhang/destiny/neuralnetwork_project2/codes/VGG_BatchNorm/reports/runs/best-candidate-large-dropout-wd-ls-cosine/models/best.pt",
+  "last_model_path": "/data/yuhang/destiny/neuralnetwork_project2/codes/VGG_BatchNorm/reports/runs/best-candidate-large-dropout-wd-ls-cosine/models/last.pt"
+}

@@ -1,0 +1,19 @@
+{
+  "model": "vgg_a",
+  "model_parameters": 9750922,
+  "device": "cuda",
+  "epochs_completed": 10,
+  "total_training_seconds": 39.887225614860654,
+  "average_epoch_seconds": 3.9887225614860653,
+  "average_train_seconds": 3.492191228410229,
+  "average_test_seconds": 0.4965313330758363,
+  "best_epoch": 9,
+  "best_train_loss": 0.363689254951477,
+  "best_train_accuracy": 0.87506,
+  "best_test_loss": 0.797374471282959,
+  "best_test_accuracy": 0.7585,
+  "best_test_error": 0.24150000000000005,
+  "best_test_error_percent": 24.150000000000006,
+  "best_model_path": "/data/yuhang/destiny/neuralnetwork_project2/codes/VGG_BatchNorm/reports/runs/vgg-a-adam-10ep/models/best.pt",
+  "last_model_path": "/data/yuhang/destiny/neuralnetwork_project2/codes/VGG_BatchNorm/reports/runs/vgg-a-adam-10ep/models/last.pt"
+}

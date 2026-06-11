@@ -78,6 +78,42 @@ Aggregate completed runs into one CSV table with:
 python aggregate_results.py
 ```
 
+
+## Final model analysis
+
+After choosing the final run, generate report figures and CSV files with:
+
+```bash
+python analyze_final_model.py \
+  --run-dir reports/runs/best-candidate-large-dropout \
+  --device auto
+```
+
+The script writes `analysis/` under the run directory, including the confusion
+matrix, per-class accuracy, correct and incorrect examples, first-layer filters,
+feature maps, and an `analysis_summary.json` file.
+
+## Shared comparison figures
+
+Plot VGG-A and VGG-A-BN training curves on shared axes with:
+
+```bash
+python compare_runs.py curves \
+  --runs vgg-a-adam-10ep vgg-a-bn-adam-10ep \
+  --labels VGG-A VGG-A-BN \
+  --output reports/comparisons/vgg_a_vs_bn_curves.png
+```
+
+After running the multi-learning-rate BN landscape experiments, combine their
+`step_loss.txt` files into one loss-envelope plot with:
+
+```bash
+python compare_runs.py landscape \
+  --group VGG-A=vgg-a-lr1e-4,vgg-a-lr5e-4,vgg-a-lr1e-3,vgg-a-lr2e-3 \
+  --group VGG-A-BN=vgg-a-bn-lr1e-4,vgg-a-bn-lr5e-4,vgg-a-bn-lr1e-3,vgg-a-bn-lr2e-3 \
+  --output reports/comparisons/bn_loss_landscape.png
+```
+
 ## VGG experiments
 
 ```bash

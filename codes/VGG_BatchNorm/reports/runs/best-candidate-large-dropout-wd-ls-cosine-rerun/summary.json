@@ -1,0 +1,19 @@
+{
+  "model": "baseline",
+  "model_parameters": 1422218,
+  "device": "mps",
+  "epochs_completed": 20,
+  "total_training_seconds": 409.1822882099932,
+  "average_epoch_seconds": 20.45911441049966,
+  "average_train_seconds": 19.003338906250065,
+  "average_test_seconds": 1.4557755042495955,
+  "best_epoch": 16,
+  "best_train_loss": 0.674912871055603,
+  "best_train_accuracy": 0.9534,
+  "best_test_loss": 0.9703812240600586,
+  "best_test_accuracy": 0.8031,
+  "best_test_error": 0.19689999999999996,
+  "best_test_error_percent": 19.689999999999998,
+  "best_model_path": "/Users/destinysmac/Downloads/PJ2_2026/codes/VGG_BatchNorm/reports/runs/best-candidate-large-dropout-wd-ls-cosine-rerun/models/best.pt",
+  "last_model_path": "/Users/destinysmac/Downloads/PJ2_2026/codes/VGG_BatchNorm/reports/runs/best-candidate-large-dropout-wd-ls-cosine-rerun/models/last.pt"
+}

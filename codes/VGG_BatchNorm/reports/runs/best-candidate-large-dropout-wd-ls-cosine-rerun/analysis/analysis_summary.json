@@ -1,0 +1,11 @@
+{
+  "run_dir": "/Users/destinysmac/Downloads/PJ2_2026/codes/VGG_BatchNorm/reports/runs/best-candidate-large-dropout-wd-ls-cosine-rerun",
+  "checkpoint": "/Users/destinysmac/Downloads/PJ2_2026/codes/VGG_BatchNorm/reports/runs/best-candidate-large-dropout-wd-ls-cosine-rerun/models/best.pt",
+  "model": "baseline",
+  "model_parameters": 1422218,
+  "test_samples": 10000,
+  "test_loss": 0.6316998688220978,
+  "test_accuracy": 0.8153,
+  "test_error": 0.18469999999999998,
+  "output_dir": "/Users/destinysmac/Downloads/PJ2_2026/codes/VGG_BatchNorm/reports/runs/best-candidate-large-dropout-wd-ls-cosine-rerun/analysis"
+}

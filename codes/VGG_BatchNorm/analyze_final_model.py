@@ -19,7 +19,7 @@ from models.vgg import VGG_A, VGG_A_BatchNorm, get_number_of_parameters
 
 
 SCRIPT_DIR = Path(__file__).resolve().parent
-DEFAULT_RUN_DIR = SCRIPT_DIR / "reports" / "runs" / "best-candidate-large-dropout"
+DEFAULT_RUN_DIR = SCRIPT_DIR / "reports" / "runs" / "best-candidate-large-dropout-wd-ls-cosine-rerun"
 CLASS_NAMES = [
     "airplane",
     "automobile",

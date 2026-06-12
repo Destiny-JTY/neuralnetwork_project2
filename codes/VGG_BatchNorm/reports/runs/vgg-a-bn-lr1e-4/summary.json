@@ -1,0 +1,19 @@
+{
+  "model": "vgg_a_bn",
+  "model_parameters": 9756426,
+  "device": "mps",
+  "epochs_completed": 10,
+  "total_training_seconds": 593.9729492090028,
+  "average_epoch_seconds": 59.39729492090028,
+  "average_train_seconds": 56.32560023739988,
+  "average_test_seconds": 3.071694683500391,
+  "best_epoch": 9,
+  "best_train_loss": 0.09299455519914628,
+  "best_train_accuracy": 0.9676,
+  "best_test_loss": 1.1403886177062987,
+  "best_test_accuracy": 0.742,
+  "best_test_error": 0.258,
+  "best_test_error_percent": 25.8,
+  "best_model_path": "/Users/destinysmac/Downloads/PJ2_2026/codes/VGG_BatchNorm/reports/runs/vgg-a-bn-lr1e-4/models/best.pt",
+  "last_model_path": "/Users/destinysmac/Downloads/PJ2_2026/codes/VGG_BatchNorm/reports/runs/vgg-a-bn-lr1e-4/models/last.pt"
+}

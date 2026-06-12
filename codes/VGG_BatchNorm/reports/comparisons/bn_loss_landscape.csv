@@ -1,0 +1,3 @@
+label,runs,aligned_steps,mean_envelope_width,max_envelope_width
+VGG-A,vgg-a-lr1e-4;vgg-a-lr5e-4;vgg-a-lr1e-3;vgg-a-lr2e-3,3910,1.7233608105524298,7.216311060000001
+VGG-A-BN,vgg-a-bn-lr1e-4;vgg-a-bn-lr5e-4;vgg-a-bn-lr1e-3;vgg-a-bn-lr2e-3,3910,0.37144264918414327,3.9148612700000003

@@ -56,3 +56,4 @@ codes/VGG_BatchNorm/data/*
 codes/VGG_BatchNorm/reports/runs/*/logs/history.json
 codes/VGG_BatchNorm/reports/runs/*/logs/step_loss.txt
 codes/VGG_BatchNorm/reports/runs/*/logs/step_gradient_norm.txt
+to-do.md
